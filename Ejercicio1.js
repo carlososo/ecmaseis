@@ -59,7 +59,7 @@ const ejercicio1 = {
 }
 
 // console.log(Object.keys(ejercicio1.responses[0].answers));
-const keys = Object.keys(ejercicio1.responses[0].answers);
+// const keys = Object.keys(ejercicio1.responses[0].answers);
 
 
 
