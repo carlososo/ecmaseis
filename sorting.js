@@ -4,7 +4,7 @@ frutas.sort();
 
 console.log(frutas);
 
-const misNumeros = [1, 20, 3, 5, 7, 9]
+// const misNumeros = [1, 20, 3, 5, 7, 9]
 
 misNumeros.sort();
 
