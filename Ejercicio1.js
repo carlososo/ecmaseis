@@ -61,32 +61,76 @@ const ejercicio1 = {
 // console.log(Object.keys(ejercicio1.responses[0].answers));
 const keys = Object.keys(ejercicio1.responses[0].answers);
 
-let primero =0;
-let segundo =0;
+let primero = 0;
+let segundo = 0;
+let tercero = 0;
+let cuarto = 0;
 
 
 for (let i = 0; i < keys.length; i++) {
     const currentKey = keys[i];
-    if(currentKey =="2020-01-01"){
-    const elementoInterior =(ejercicio1.responses[0].answers[currentKey])
-    for(let j=0; j<elementoInterior.length; j++){
-        // console.log(elementoInterior[j].answer)
-        if(elementoInterior[j].answer== "SI"){
-           primero++;
+    if (currentKey == "2020-01-01") {
+        const elementoInterior = (ejercicio1.responses[0].answers[currentKey])
+        for (let j = 0; j < elementoInterior.length; j++) {
+            // console.log(elementoInterior[j].answer)
+            if (elementoInterior[j].answer == "SI") {
+                primero++;
+            }
         }
-    }
-    
-}else if(currentKey =="2020-02-02"){
-    const elementoInterior =(ejercicio1.responses[0].answers[currentKey])
-    for(let j=0; j<elementoInterior.length; j++){
-        // console.log(elementoInterior[j].answer)
-        if(elementoInterior[j].answer== "SI"){
-           segundo++;
+
+
+    } else if (currentKey == "2020-02-02") {
+        const elementoInterior = (ejercicio1.responses[0].answers[currentKey])
+        for (let j = 0; j < elementoInterior.length; j++) {
+            // console.log(elementoInterior[j].answer)
+            if (elementoInterior[j].answer == "SI") {
+                segundo++;
+            }
         }
+
     }
-  
 }
-elementoInterior:primero}
+
+for (let i = 0; i < keys.length; i++) {
+    const currentKey = keys[i];
+    if (currentKey == "2020-01-01") {
+        const elementoInterior = (ejercicio1.responses[1].answers[currentKey])
+        for (let j = 0; j < elementoInterior.length; j++) {
+            // console.log(elementoInterior[j].answer)
+            if (elementoInterior[j].answer == "SI") {
+                tercero++;
+            }
+        }
 
 
-console.log(ejercicio1.responses[0].answers)
+    } else if (currentKey == "2020-02-02") {
+        const elementoInterior = (ejercicio1.responses[1].answers[currentKey])
+        for (let j = 0; j < elementoInterior.length; j++) {
+            // console.log(elementoInterior[j].answer)
+            if (elementoInterior[j].answer == "SI") {
+                cuarto++;
+            }
+        }
+
+    }
+}
+
+
+
+const ejercicio2 = {
+    "responses": [{
+        "question": "¿te gusta el pan?",
+        "answers": {
+            "2020-01-01": primero,
+            "2020-02-02": segundo,
+        }
+    }, {
+        "question": "¿te gusta el queso?",
+        "answers": {
+            "2020-01-01": tercero,
+            "2020-02-02": cuarto,
+        }
+    }]
+}
+
+console.log(JSON.stringify(ejercicio2));
