@@ -59,11 +59,34 @@ const ejercicio1 = {
 }
 
 // console.log(Object.keys(ejercicio1.responses[0].answers));
-// const keys = Object.keys(ejercicio1.responses[0].answers);
+const keys = Object.keys(ejercicio1.responses[0].answers);
 
+let primero =0;
+let segundo =0;
 
 
 for (let i = 0; i < keys.length; i++) {
     const currentKey = keys[i];
-    console.log(ejercicio1.responses[0].answers[currentKey][0])
+    if(currentKey =="2020-01-01"){
+    const elementoInterior =(ejercicio1.responses[0].answers[currentKey])
+    for(let j=0; j<elementoInterior.length; j++){
+        // console.log(elementoInterior[j].answer)
+        if(elementoInterior[j].answer== "SI"){
+           primero++;
+        }
+    }
+    
+}else if(currentKey =="2020-02-02"){
+    const elementoInterior =(ejercicio1.responses[0].answers[currentKey])
+    for(let j=0; j<elementoInterior.length; j++){
+        // console.log(elementoInterior[j].answer)
+        if(elementoInterior[j].answer== "SI"){
+           segundo++;
+        }
+    }
+  
 }
+elementoInterior:primero}
+
+
+console.log(ejercicio1.responses[0].answers)
