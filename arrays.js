@@ -31,6 +31,7 @@ const miarray = [{
 const valorArreglo = miarray.filter((persona) => {
     return persona.age >= 20
 })
+console.log(valorArreglo);
 
 const miOtroArregloNombres = valorArreglo.map(persona => persona.name)
 console.log(miOtroArregloNombres);

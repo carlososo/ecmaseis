@@ -58,8 +58,22 @@ const ejercicio1 = {
     ]
 }
 
-// console.log(Object.keys(ejercicio1.responses[0].answers));
 const keys = Object.keys(ejercicio1.responses[0].answers);
+let pruebas = []
+for (let i = 0; i < keys.length; i++) {
+    const currentKey = keys[i];
+    pruebas = ejercicio1.responses.map((responses) => {
+        return responses.answers[currentKey]
+            .filter((valor) => {
+                return valor.selected === true
+            })
+    })
+}
+
+console.log(pruebas);
+
+// console.log(Object.keys(ejercicio1.responses[0].answers));
+
 
 let primero = 0;
 let segundo = 0;
