@@ -59,11 +59,13 @@ const ejercicio1 = {
 }
 
 // console.log(Object.keys(ejercicio1.responses[0].answers));
-const keys = Object.keys(ejercicio1.responses[0].answers);
+// const keys = Object.keys(ejercicio1.responses[0].answers);
 
-console.log(Object.values(ejercicio1.responses[0].answers["2020-01-01"].answer[0]));
+const keys = Object.values(ejercicio1.responses[0].answers);
+// console.log(keys)
 
-// for (let i = 0; i < keys.length; i++) {
-//     const currentKey = keys[i];
-//     console.log(ejercicio1.responses[0].answers[currentKey])
-// }
+for (let i = 0; i < keys.length; i++) {
+    const currentKey = keys[i];
+    console.log(currentKey);
+    console.log(ejercicio1.responses[0].answers)
+}
